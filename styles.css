@@ -1,0 +1,98 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+body{
+    color:white;
+    background-color: black;
+}
+
+.container{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    
+}
+
+
+
+.font{
+    color:#CC7722;
+    font-size: 50px;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color:#80461B  ;
+}
+
+.header{
+ font-size: 100px;
+}
+
+.header-container{
+    display:flex;
+    width: 1100px;
+    justify-content: space-between;
+}
+
+.header-image{
+    height: 150px;
+    width: 150px;
+}
+
+.word-container{
+border: solid 2px black;
+color:black;
+height: 550px;
+width: 1100px;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: space-between;
+padding: 20px;
+background-image:url(Assets/desert-2.jpg) ;
+background-repeat: no-repeat;
+background-size: cover;
+background-color:#80461B ;
+}
+
+
+.word{
+    border:solid 2px black;
+    width: 1000px;
+    height:100px;
+}
+
+.hangman-container{
+border:5px #CC7722;
+border-radius: 50px;;
+height:400px;
+width: 650px;
+background-color:#dd9145;
+}
+
+.letter-area{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.letter-container{
+    display: flex;
+    flex-direction:row;
+}
+
+button{
+    width: 50px;
+    height:50px;
+    background-color: #80461B;
+    color:#CC7722;
+    font-size: 30px;
+}
+
+#textbox{
+    width: 20px;
+}
