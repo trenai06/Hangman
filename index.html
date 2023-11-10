@@ -16,17 +16,34 @@
         </div>
 
         <div class="word-container">
-           <h1> Try and guess the word before the figure is completed. </h1>
-            <div class="word"> </div>
+           
+            <div class="word" id="word" > 
+             
+                <div class="blank-space" id="blank"> </div>
+            </div>
         
-            <div class="hangman-container"></div>
+            <div class="hangman-container">
+                <!-- <svg>  
+                    <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" ></circle>
+                </svg> -->
+            </div>
         </div>
         <div class="letter-area">
             <h1 class="font"> YOUR LETTERS </h1>
             <div class="letter-container">
-                <button >A</button><button>B</button><button>C</button><button>D</button><button>E</button><button>F</button><button>G</button><button>H</button>
-                <button>I</button><button>J</button><button>K</button><button>L</button><button>M</button><button>N</button><button>O</button><button>P</button>
-                <button>Q</button><button>R</button><button>S</button><button>T</button><button>U</button><button>V</button><button>W</button><button>X</button><button>Y</button><button>Z</button>
+                <button id="A" onclick="document.getElementById('A').disabled = true, letterAppear(this.value)" value="A">A</button><button id="B" onclick="document.getElementById('B').disabled = true, letterAppear(this.value)" value="B" >B</button>
+                <button id="C" onclick="document.getElementById('C').disabled = true, letterAppear(this.value)" value="C">C</button><button id="D" onclick="document.getElementById('D').disabled = true, letterAppear(this.value)" value="D">D</button> 
+                <button id="E" onclick="document.getElementById('E').disabled = true, letterAppear(this.value)" value="E">E</button><button id="F" onclick="document.getElementById('F').disabled = true, letterAppear(this.value)" value="F">F</button>
+                <button id="G" onclick="document.getElementById('G').disabled = true, letterAppear(this.value)" value="G">G</button><button id="H" onclick="document.getElementById('H').disabled = true, letterAppear(this.value)" value="H">H</button>
+                <button id="I" onclick="document.getElementById('I').disabled = true, letterAppear(this.value)" value="I">I</button><button id="J" onclick="document.getElementById('J').disabled = true, letterAppear(this.value)" value="J">J</button>
+                <button id="K" onclick="document.getElementById('K').disabled = true, letterAppear(this.value)" value="K">K</button><button id="L" onclick="document.getElementById('L').disabled = true, letterAppear(this.value)" value="L">L</button>
+                <button id="M" onclick="document.getElementById('M').disabled = true, letterAppear(this.value)" value="M">M</button><button id="N" onclick="document.getElementById('N').disabled = true, letterAppear(this.value)" value="N">N</button>
+                <button id="O" onclick="document.getElementById('O').disabled = true, letterAppear(this.value)" value="O">O</button><button id="P" onclick="document.getElementById('P').disabled = true, letterAppear(this.value)" value="P">P</button>
+                <button id="Q" onclick="document.getElementById('Q').disabled = true, letterAppear(this.value)" value="Q">Q</button><button id="R" onclick="document.getElementById('R').disabled = true, letterAppear(this.value)" value="R">R</button>
+                <button id="S" onclick="document.getElementById('S').disabled = true, letterAppear(this.value)" value="S">S</button><button id="T" onclick="document.getElementById('T').disabled = true, letterAppear(this.value)" value="T">T</button>
+                <button id="U" onclick="document.getElementById('U').disabled = true, letterAppear(this.value)" value="U">U</button><button id="V" onclick="document.getElementById('V').disabled = true, letterAppear(this.value)" value="V">V</button>
+                <button id="W" onclick="document.getElementById('W').disabled = true, letterAppear(this.value)" value="W">W</button><button id="X" onclick="document.getElementById('X').disabled = true, letterAppear(this.value)" value="X">X</button>
+                <button id="Y" onclick="document.getElementById('Y').disabled = true, letterAppear(this.value)" value="Y">Y</button><button id="Z" onclick="document.getElementById('Z').disabled = true, letterAppear(this.value)" value="Z">Z</button>
             </div>
         </div>
 
