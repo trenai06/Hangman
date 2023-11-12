@@ -1,58 +1,56 @@
-// 1. Create wordbank (array) randomize, push on load
-let wordBank = ["JUVENILE", "COURTESY", "LISTEN", "CATCALL", "LEPROSY"];
-
+let wordBank = ["GARLIC", "PARSLEY", "CUMIN", "TUMERIC", "CILANTRO", "THYME", "MINT", "SAGE", "NUTMEG", "CLOVER"];
 let word = Math.floor(Math.random() * wordBank.length);
 let wordSelect = wordBank[word].split("");
 
 console.log(wordSelect);
 
-newWord = wordSelect.toString();
-console.log(newWord);
-
+let newWord = wordSelect.toString();
 let newString = newWord.replaceAll(",", " ");
 console.log(newString);
 
-// // 2. create an empty array for letter blanks of the called word (push on load)
 let underscores = "_";
 let blanks;
 blanks = " _".repeat(wordSelect.length - 1);
 
 let underscoreString = underscores.concat(blanks);
-
 document.getElementById("blank").innerHTML = underscoreString;
 
+let score = 1; 
+let hangman = ["Post", "Head", "Body", "Right Arm", "Left Arm", "Right Leg", "Left Leg"]
+let man = []
 
-
-
-// 3. when a letter is chosen and correct it appears in word space
-
-// 4. when letter is chosen blank out with same background color
-
-function letterAppear(buttonvalue)  {
- 
-  
-  
+function letterAppear(buttonvalue){
   if (wordSelect.includes(buttonvalue) === true) {
-    let indexOfButtonValue = wordSelect.indexOf(buttonvalue).every();
-    indexOfButtonValue = indexOfButtonValue + indexOfButtonValue
+    let indexOfButtonValue = wordSelect.indexOf(buttonvalue);
+    indexOfButtonValue = indexOfButtonValue + indexOfButtonValue;
     let stringArray = underscoreString.split("");
     stringArray[indexOfButtonValue] = buttonvalue;
+    console.log(stringArray)
     let newHiddenString = stringArray.join("");
     underscoreString = newHiddenString;
-    document.getElementById("blank").innerHTML = underscoreString;
+    console.log(newHiddenString)
+    document.getElementById("blank").innerHTML = underscoreString; 
+    document.getElementById("score").innerHTML = score++;
+ 
+  if(score == wordSelect.length + 1){
+    setTimeout(() =>{
+      alert(`You Win!!! Want to try`)
+        window.location.reload();
+    }  , 100);
+    } 
+  }else if(wordSelect.includes(buttonvalue) === false){
+    man.push(hangman[0])
+    document.getElementById("hangman").innerHTML = man
+    man.pop()
+    hangman.shift()
+
+  if(document.getElementById("hangman").innerHTML === "Left Leg"){
+    setTimeout(() =>{
+    alert(`You Lose! Want to try again?`)
+    window.location.reload();
+    }, 100);
+    }
   }
-}  
-
-
-for(let i = 0; i < wordSelect.length; i++){
-  console.log(wordSelect[i])
 }
 
 
-// 5. when letter is incorrect draw a piece of the man
-
-// 6. game win alert and reload (put it in a results function if possible)
-// 7. game lose alert and reload (put it in a results function if possible )
-// 8. create canvas for hangman draw
-// 9. fine tune Css Styling  .remove border from the word spell out space
-// 10. update wordBank and maybe add a hint:
